@@ -5,7 +5,7 @@ include_once('model/Templete.php');
 
 function handler() {
 $pag= helper_pag_data();
-$per=new Empleado();
+$per=new empleado();
 $template=new Template();//activacion de los diseños de bostrap//
 $template->head();
 switch ($pag) {
@@ -65,7 +65,7 @@ return $pag_data;
 
 if(!isset($_SESSION["id_usuario"])){
 	header("status:301 Moved Permanently");
-    header("Location: http://localhost:8080/jett/index.html");
+    header("Location: http://localhost:8080/recu_labo/index.html");
     exit;
 }else{
 handler();
